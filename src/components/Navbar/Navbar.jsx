@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Navbar = () => {
+    const {user, logOutUser} = useContext(AuthContext);
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/listings">Listings</NavLink></li>
@@ -8,6 +12,16 @@ const Navbar = () => {
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
     </>;
+
+    const handleLogOut = () => {
+        logOutUser()
+        .then(() => {
+            toast.success('Logout');
+        })
+        .catch(error => {
+            toast.error(error);
+        })
+    }
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -27,13 +41,19 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                {
+                    user && <p>{user.email}</p>
+                }
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
                         <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                     </div>
                 </div>
-                <Link><button className="btn">Login</button></Link>
+                {
+                    user? <button onClick={handleLogOut} className="btn">Logout</button> : <Link><button className="btn">Login</button></Link>
+                }
             </div>
+            <Toaster></Toaster>
         </div>
     );
 };
