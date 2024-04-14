@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import signUX from '../../assets/signUp.svg'
 
 const Login = () => {
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
+                <div className="hero-content flex-col lg:flex-row-reverse gap-10">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Login now!</h1>
                         <img src={signUX} alt="" />
@@ -30,6 +31,7 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                         </form>
+                        <p className='text-center p-4'>Dont have an account? <Link to="/register"><a className="link link-error font-bold">Register</a></Link></p>
                     </div>
                 </div>
             </div>
