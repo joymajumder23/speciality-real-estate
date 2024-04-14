@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-import signUX from '../../assets/signUp.svg'
+import signUX from '../../assets/signUp.svg';
+import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
     return (
@@ -29,6 +31,14 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
+                                
+                            </div>
+                            <hr />
+                            <p className='text-center'>or</p>
+                            <hr />
+                            <div>
+                            <Link><button className='btn btn-ghost w-full'><FcGoogle></FcGoogle> Login with Google</button></Link>
+                            <Link><button className='btn btn-ghost w-full'><FaGithub></FaGithub> Login with Github</button></Link>
                             </div>
                         </form>
                         <p className='text-center p-4'>Dont have an account? <Link to="/register"><a className="link link-error font-bold">Register</a></Link></p>
