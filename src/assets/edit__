@@ -1,0 +1,16 @@
+// import art from '../../assets/art.jpg';
+// import hospital from '../../assets/hospital.jpg';
+// import school from '../../assets/school.jpg';
+// import wedding from '../../assets/wedding.jpg';
+// import temple from '../../assets/temple.jpg';
+// import festive from '../../assets/festive.jpg';
+// import terminal from '../../assets/terminal.jpg';
+
+
+// <SwiperSlide><img src={art} alt="" /></SwiperSlide>
+//       <SwiperSlide><img src={hospital} alt="" /></SwiperSlide>
+//       <SwiperSlide><img src={school} alt="" /></SwiperSlide>
+//       <SwiperSlide><img src={temple} alt="" /></SwiperSlide>
+//       <SwiperSlide><img src={festive} alt="" /></SwiperSlide>
+//       <SwiperSlide><img src={wedding} alt="" /></SwiperSlide>
+//       <SwiperSlide><img src={terminal} alt="" /></SwiperSlide>
