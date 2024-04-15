@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import signUX from '../../assets/signUp.svg';
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
@@ -9,6 +9,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const Login = () => {
     const { loginUser, googleLogin } = useContext(AuthContext);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -22,6 +23,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success('Successfully Login');
+                navigate("/");
             })
             .catch(error => {
                 console.log(error.message);
@@ -35,6 +37,7 @@ const Login = () => {
         googleLogin()
         .then(result => {
             toast.success('Successfully Login');
+            navigate("/");
         })
         .catch(error => {
             console.log(error.message);

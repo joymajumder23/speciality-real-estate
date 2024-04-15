@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Saint Mary's Hospital",
+      "image": "https://i.ibb.co/Tqnr0Bz/glass-buildings-seen-from-lake.jpg",
+      "segment_name": "Hospitals",
+      "description": "Saint Mary's Hospital stands as a beacon of modern healthcare excellence in the heart of the city. With a legacy of compassionate care spanning decades, it offers comprehensive medical services tailored to meet the diverse needs of the community. Boasting state-of-the-art facilities and a team of highly skilled healthcare professionals, the hospital is equipped to handle a wide range of medical conditions and emergencies. From cutting-edge diagnostic technology to advanced surgical interventions, every aspect of patient care is meticulously designed to ensure optimal outcomes and patient satisfaction. The hospital's commitment to excellence extends beyond clinical care, fostering a healing environment that prioritizes comfort, dignity, and holistic well-being. Whether it's routine check-ups, complex surgeries, or specialized treatments, Saint Mary's Hospital remains steadfast in its mission to provide accessible, high-quality healthcare that transforms lives.",
+      "price": "$10,000,000",
+      "status": "sale",
+      "area": "50,000 sq ft",
+      "location": "City Center",
+      "facilities": ["Emergency Department", "Operating Theaters", "ICU"]
+    },
+    {
+      "id": 2,
+      "estate_title": "Brighton High School",
+      "image": "https://i.ibb.co/wQV942Q/full-shot-women-walking-city-winter-season.jpg",
+      "segment_name": "Schools",
+      "description": "Brighton High School stands as a beacon of educational excellence in the heart of the suburban landscape. With a rich history spanning decades, it has earned a reputation for fostering not just academic prowess but also holistic development. The sprawling campus, spanning 100,000 square feet, provides a conducive environment for students to thrive intellectually and socially. Equipped with state-of-the-art facilities including classrooms outfitted for modern pedagogical approaches, a well-stocked library encouraging a love for reading and research, and extensive sports facilities nurturing physical health and teamwork. The school's ethos revolves around inclusivity and diversity, ensuring every student feels valued and supported in their educational journey. Brighton High School is not just an institution; it's a community where lifelong friendships are forged, and dreams are nurtured, preparing students to embark on successful futures.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "100,000 sq ft",
+      "location": "Suburb",
+      "facilities": ["Classrooms", "Library", "Sports Facilities"]
+    },
+    {
+      "id": 3,
+      "estate_title": "Sacred Heart Cathedral",
+      "image": "https://i.ibb.co/Pw9Kgvj/coltea-hospital-building.jpg",
+      "segment_name": "Religious Facilities",
+      "description": "The Sacred Heart Cathedral stands as a timeless symbol of faith and community, its grandeur and architectural splendor drawing worshippers and visitors alike. Nestled in the heart of the city, its soaring spires and ornate facade beckon all seekers of solace and spiritual reflection. Within its hallowed halls, history intertwines with reverence, each stone echoing centuries of devotion and tradition. From the intricately crafted stained glass windows to the solemnity of the main sanctuary, every detail embodies the cathedral's sacred purpose. Beyond its role as a place of worship, the cathedral serves as a vibrant center for cultural exchange and community gatherings, hosting concerts, lectures, and charitable events. Whether bathed in the soft glow of candlelight during a midnight mass or bustling with life during a festive celebration, the Sacred Heart Cathedral stands as a beacon of faith and unity for generations to come.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "20,000 sq ft",
+      "location": "Downtown",
+      "facilities": ["Main Sanctuary", "Chapels", "Community Hall"]
+    },
+    {
+      "id": 4,
+      "estate_title": "Central Station",
+      "image": "https://i.ibb.co/0XdDm86/train-railway-station-covered-with-snow-winter.jpg",
+      "segment_name": "Transportation Terminals",
+      "description": "Central Station stands as a bustling nexus of urban connectivity, seamlessly intertwining various modes of public transportation. Serving as a pivotal hub within the cityscape, it pulsates with the energy of travelers embarking on journeys both near and far. Its grandeur is matched only by its efficiency, boasting expansive platforms, state-of-the-art ticketing counters, and an array of amenities catering to the diverse needs of commuters. From the rhythmic hustle of daily commuters to the occasional bustle of tourists, Central Station embodies the heartbeat of the city's transportation network. Nestled in the vibrant heart of the metropolis, it serves as a gateway to adventure, linking individuals to destinations across the region. Amidst the constant motion, Central Station remains an emblem of connectivity, unity, and the relentless spirit of exploration.",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "150,000 sq ft",
+      "location": "City Center",
+      "facilities": ["Platforms", "Ticketing Counters", "Restaurants"]
+    },
+    {
+      "id": 5,
+      "estate_title": "Metropolitan Convention Center",
+      "image": "https://i.ibb.co/m5Xbb74/building-with-colorful-walls.jpg",
+      "segment_name": "Convention Centers",
+      "description": "The Metropolitan Convention Center stands as a premier venue, meticulously designed to host an array of conferences, exhibitions, and events. With its expansive 200,000 square feet space located in the heart of downtown, it offers unparalleled accessibility and convenience. The center boasts state-of-the-art facilities, including spacious exhibition halls, versatile conference rooms, and elegant banquet facilities, ensuring seamless execution of events of all scales. Its contemporary design and flexible layout make it adaptable to diverse requirements, accommodating everything from corporate conferences to grand exhibitions and gala dinners. From cutting-edge audiovisual technology to exceptional catering services, every detail is meticulously curated to enhance the attendee experience. Whether it's networking sessions, keynote speeches, or product showcases, the Metropolitan Convention Center provides an inspiring backdrop for memorable and impactful events, making it the preferred choice for discerning event planners and organizers.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "200,000 sq ft",
+      "location": "Downtown",
+      "facilities": ["Exhibition Halls", "Conference Rooms", "Banquet Facilities"]
+    },
+    {
+      "id": 6,
+      "estate_title": "Modern Art Gallery",
+      "image": "https://i.ibb.co/TgTK4mG/people-enjoying-art-exhibition.jpg",
+      "segment_name": "Art Galleries",
+      "description": "The Modern Art Gallery stands as a vibrant cultural hub, celebrating creativity and innovation through its diverse collection of contemporary artworks. Nestled in the heart of the bustling Art District, this gallery invites patrons into a world where imagination knows no bounds. With its sleek architecture and spacious exhibition halls, it provides an immersive experience for art enthusiasts and novices alike. From striking paintings to avant-garde sculptures, each piece tells a unique story and sparks thought-provoking conversations. The gallery's commitment to showcasing both local talents and international artists ensures a dynamic rotation of exhibits, keeping visitors engaged with fresh perspectives and cutting-edge aesthetics. Beyond its role as a showcase, the gallery fosters a sense of community, hosting workshops, lectures, and cultural events that enrich the artistic landscape of the city. Discover, explore, and be inspired at the Modern Art Gallery—a haven for creativity and expression.",
+      "price": "$7,500,000",
+      "status": "sale",
+      "area": "30,000 sq ft",
+      "location": "Art District",
+      "facilities": ["Exhibition Spaces", "Auditorium", "Café"]
+    },
+    {
+      "id": 7,
+      "estate_title": "Harmony Music Academy",
+      "image": "https://i.ibb.co/0qb2D6X/full-shot-country-musicians-indoors.jpg",
+      "segment_name": "Schools",
+      "description": "Harmony Music Academy is a prestigious institution dedicated to cultivating musical talent through comprehensive education and training. Nestled in the serene suburbs, the academy provides a conducive environment for students to explore their passion for music. With state-of-the-art facilities including practice rooms, a performance hall, and a recording studio, students receive holistic training in various musical disciplines. Led by experienced instructors who are experts in their respective fields, the academy offers personalized guidance and mentorship to nurture individual strengths and talents. From classical to contemporary, students are exposed to a diverse range of musical genres, fostering creativity and innovation. Whether aspiring to become virtuosos or pursuing a career in the music industry, Harmony Music Academy empowers students to realize their full potential and embark on a lifelong journey of musical excellence.",
+      "price": "$4,000,000",
+      "status": "rent",
+      "area": "15,000 sq ft",
+      "location": "Suburb",
+      "facilities": ["Practice Rooms", "Performance Hall", "Recording Studio"]
+    },
+    {
+      "id": 8,
+      "estate_title": "Tranquil Retreat Mosque",
+      "image": "https://i.ibb.co/HLvsnpv/traditional-islamic-mosque-palm-trees-sunny-weather.jpg",
+      "segment_name": "Religious Facilities",
+      "description": "Tranquil Retreat Mosque offers a serene sanctuary for spiritual contemplation and prayer. Nestled amidst picturesque surroundings on the outskirts of the city, this mosque provides a tranquil escape from the hustle and bustle of urban life. The architectural design embodies elegance and simplicity, reflecting the essence of Islamic aesthetics. Within its peaceful confines, visitors find solace in the spacious prayer hall adorned with intricate calligraphy and calming hues. The mosque also features a well-stocked library housing a wealth of religious texts and scholarly works, fostering intellectual enlightenment and spiritual growth. Ablution facilities are thoughtfully designed for convenience and cleanliness. Tranquil Retreat Mosque serves as more than just a place of worship; it is a haven where individuals gather to seek inner peace, connect with their faith, and rejuvenate their souls.",
+      "price": "$3,000,000",
+      "status": "sale",
+      "area": "10,000 sq ft",
+      "location": "Outskirts",
+      "facilities": ["Prayer Hall", "Library", "Ablution Facilities"]
+    },
+    {
+      "id": 9,
+      "estate_title": "Urban Oasis Park",
+      "image": "https://i.ibb.co/BgNjGhT/tokyo-japan-cityscape.jpg",
+      "segment_name": "Parks",
+      "description": "The Urban Oasis Park is a verdant sanctuary nestled amidst the bustling city outskirts, offering a serene escape for residents and visitors alike. Spanning over 50 acres of lush greenery, this park serves as a haven for relaxation, recreation, and communing with nature. Its meticulously landscaped grounds feature a harmonious blend of vibrant flora, tranquil ponds, and winding walking trails, inviting visitors to unwind and rejuvenate amid the urban hustle. Families can enjoy picnics in designated areas, while children explore playgrounds designed for endless fun and adventure. Nature enthusiasts can meander along the scenic trails, spotting local wildlife and appreciating the beauty of native plants. Whether seeking solitude for reflection or socializing with loved ones, Urban Oasis Park offers a retreat from the city's frenetic pace, fostering a sense of peace and well-being in its idyllic surroundings.",
+      "price": "$1,000,000",
+      "status": "sale",
+      "area": "50 acres",
+      "location": "City Outskirts",
+      "facilities": ["Playgrounds", "Picnic Areas", "Walking Trails"]
+    }
+  ]
+  
