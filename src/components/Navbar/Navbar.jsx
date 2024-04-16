@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
+import profile from '../../assets/user.png';
 
 const Navbar = () => {
     const {user, logOutUser} = useContext(AuthContext);
@@ -9,6 +10,7 @@ const Navbar = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/listings">Listings</NavLink></li>
         <li><NavLink to="/contact">Contact Us</NavLink></li>
+        <li><NavLink to="/updateProfile">Update Profile</NavLink></li>
         <li><NavLink to="/login">Login</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
     </>;
@@ -52,7 +54,7 @@ const Navbar = () => {
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
                        {
-                        user && <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                        user && <img alt={profile} src={user.photoURL} />
                        }
                     </div>
                 </div>

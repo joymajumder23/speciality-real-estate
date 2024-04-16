@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import signUX from '../../assets/signUp.svg';
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
@@ -10,6 +10,7 @@ const Login = () => {
     const { loginUser, googleLogin } = useContext(AuthContext);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -23,7 +24,9 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 toast.success('Successfully Login');
-                navigate("/");
+                if(result.user){
+                    navigate(location?.state? location.state : "/");
+                }
             })
             .catch(error => {
                 console.log(error.message);
@@ -37,7 +40,10 @@ const Login = () => {
         googleLogin()
         .then(result => {
             toast.success('Successfully Login');
-            navigate("/");
+            if(result.user){
+                navigate(location?.state? location.state : "/");
+            }
+            
         })
         .catch(error => {
             console.log(error.message);

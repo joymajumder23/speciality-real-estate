@@ -7,6 +7,8 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import Estates from "../components/Estates/Estates";
 import EstateDetails from "../components/Estates/EstateDetails";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -32,10 +34,14 @@ const router = createBrowserRouter([
         },
         {
             path: "/details/:id",
-            element: <EstateDetails></EstateDetails>,
+            element: <PrivateRoute><EstateDetails></EstateDetails></PrivateRoute>,
             loader: () => fetch('/estates.json')
+        },
+        {
+            path: "/updateProfile",
+            element: <UpdateProfile></UpdateProfile>
         }]
-    },
+    }
 ]);
 
 export default router;

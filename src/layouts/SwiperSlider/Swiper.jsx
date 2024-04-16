@@ -9,12 +9,12 @@ import 'swiper/css/navigation';
 
 import './styles.css';
 
-import art from '../../assets/art.png';
+import art from '../../assets/art1.jpg';
 import hospital from '../../assets/hospital.png';
-import school from '../../assets/school.png';
+import school from '../../assets/school1.jpg';
 import wedding from '../../assets/wedding.png';
 import temple from '../../assets/temple.png';
-import festive from '../../assets/festive.png';
+import festive from '../../assets/festive1.jpg';
 import terminal from '../../assets/terminal.png';
 
 // import required modules
