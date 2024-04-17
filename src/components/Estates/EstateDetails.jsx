@@ -41,7 +41,7 @@ const EstateDetails = () => {
                             <h3 className="text-xl">Facilities:</h3>
                            <div className="mb-3 border-b">
                            {
-                                facilities.map(data => <div className="badge badge-outline mr-2 mb-2">{data}</div>)
+                                facilities.map((data, index) => <div key={index} className="badge badge-outline mr-2 mb-2">{data}</div>)
                             }
                            </div>
                             <p className="flex items-center gap-1 text-xl mb-3 border-b"><FaChartArea></FaChartArea> Area: {area}</p>

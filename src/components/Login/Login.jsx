@@ -8,7 +8,8 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
-    const { loginUser, googleLogin } = useContext(AuthContext);
+    const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
+    console.log(githubLogin);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
     const location = useLocation();
@@ -45,6 +46,19 @@ const Login = () => {
                 navigate(location?.state? location.state : "/");
             }
             
+        })
+        .catch(error => {
+            console.log(error.message);
+        })
+    }
+
+    const handleGithub = () => {
+        githubLogin()
+        .then(result => {
+            toast.success('Successfully Login');
+            if(result.user){
+                navigate(location?.state? location.state : "/");
+            }
         })
         .catch(error => {
             console.log(error.message);
@@ -90,7 +104,8 @@ const Login = () => {
                             <hr />
                             <div>
                                 <Link><button onClick={handleGoogle} className='btn btn-ghost w-full'><FcGoogle></FcGoogle> Login with Google</button></Link>
-                                <Link><button className='btn btn-ghost w-full'><FaGithub></FaGithub> Login with Github</button></Link>
+                                
+                                <Link><button onClick={handleGithub} className='btn btn-ghost w-full'><FaGithub></FaGithub> Login with Github</button></Link>
                             </div>
                         </form>
                         <p className='text-center p-4'>Dont have an account? <Link to="/register"><a className="link link-error font-bold">Register</a></Link></p>
