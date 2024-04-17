@@ -5,7 +5,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import profile from '../../assets/user.png';
 
 const Navbar = () => {
-    const {user, logOutUser} = useContext(AuthContext);
+    const { user, logOutUser } = useContext(AuthContext);
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/listings">Listings</NavLink></li>
@@ -22,12 +22,12 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logOutUser()
-        .then(() => {
-            toast.success('Logout');
-        })
-        .catch(error => {
-            toast.error(error);
-        })
+            .then(() => {
+                toast.success('Logout');
+            })
+            .catch(error => {
+                toast.error(error);
+            })
     }
     return (
         <div className="navbar bg-base-100">
@@ -49,17 +49,29 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user && <p>{user.email}</p>
+                    user && <p>{user.displayName}</p>
                 }
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                       {
-                        user && <img alt={profile} src={user.photoURL} />
-                       }
+                <div className="dropdown dropdown-end">
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            {
+                               user? <img alt="Tailwind CSS Navbar component" src={user.photoURL} /> : <img alt="Tailwind CSS Navbar component" src={profile} />
+                            }
+                        </div>
                     </div>
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <Link to="/updateProfile"><a className="justify-between">
+                                Profile</a></Link>
+                        </li>
+                        <li><a>Settings</a></li>
+                        {
+                            user ? <button onClick={handleLogOut} className="btn">Logout</button> : ""
+                        }
+                    </ul>
                 </div>
                 {
-                    user? <button onClick={handleLogOut} className="btn">Logout</button> : <Link to="/login"><button className="btn">Login</button></Link>
+                    user ? <button onClick={handleLogOut} className="btn">Logout</button> : <Link to="/login"><button className="btn">Login</button></Link>
                 }
             </div>
             <Toaster></Toaster>

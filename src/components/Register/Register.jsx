@@ -12,9 +12,9 @@ const Register = () => {
     const handleRegister = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
-        const name = form.get('name');
+        const name = form.get('fullName');
         const email = form.get('email');
-        const photo = form.get('photo');
+        const photo = form.get('image');
         const password = form.get('password');
         const confirmPassword = form.get('confirmPassword');
         console.log(name, email, photo, password, confirmPassword);
@@ -65,7 +65,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input name='name' type="text" placeholder="name" className="input input-bordered rounded-none" required />
+                                <input name='fullName' type="text" placeholder="full name" className="input input-bordered rounded-none" required />
                             </div>
 
                             <div className="form-control">
@@ -79,7 +79,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text" name='photo' placeholder="photo url" className="input input-bordered rounded-none" required />
+                                <input type="text" name='image' placeholder="photo url" className="input input-bordered rounded-none" required />
                             </div>
 
                             <div className="form-control">
