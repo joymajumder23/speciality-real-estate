@@ -51,9 +51,11 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                <div className="hidden lg:block">
                 {
                     user && <p>{user.displayName}</p>
                 }
+                </div>
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">

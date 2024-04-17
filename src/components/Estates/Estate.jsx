@@ -1,13 +1,14 @@
 import { CiLocationOn } from "react-icons/ci";
 import { FaChartArea } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 const Estate = ({ estate }) => {
-    console.log(estate);
+    // console.log(estate);
     const {id, image, estate_title, facilities, location, segment_name, area} = estate;
     return (
         <div>
             <div className="card w-full bg-base-100 shadow-xl rounded-none">
-                <figure><img src={image} alt="Shoes" /></figure>
+                <figure><img src={image} alt="" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
                         {estate_title}
@@ -18,7 +19,7 @@ const Estate = ({ estate }) => {
                         <hr />
                         <div className="mt-2">
                         {
-                            facilities.map((data) => <div className="badge badge-outline mr-2 mb-2">{data}</div>)
+                            facilities.map((data, index) => <div key={index} className="badge badge-outline mr-2 mb-2">{data}</div>)
                         }
                         </div>
                         </div>
@@ -36,4 +37,7 @@ const Estate = ({ estate }) => {
     );
 };
 
+Estate.propTypes = {
+    estate: PropTypes.object
+}
 export default Estate;

@@ -1,52 +1,49 @@
-import { MapContainer } from 'https://cdn.esm.sh/react-leaflet/MapContainer'
-import { TileLayer } from 'https://cdn.esm.sh/react-leaflet/TileLayer'
-import { Helmet } from 'react-helmet-async';
-import { Marker, Popup } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+
+
+
 const Contact = () => {
+    const position = [22.36209910790883, 91.81050702303207]
     return (
         <div>
-            <Helmet>
-            <title>Home | Contact Us</title>
-            </Helmet>
-            <div className="hero min-h-screen bg-base-200">
+
+            <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-
-                        <div>
-                            <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                        
+                        <div className="w-24 h-14">
+                            <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
                                 <TileLayer
                                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                                 />
-                                <Marker position={[51.505, -0.09]}>
+                                <Marker position={position}>
                                     <Popup>
                                         A pretty CSS3 popup. <br /> Easily customizable.
                                     </Popup>
                                 </Marker>
                             </MapContainer>
                         </div>
+
                     </div>
-                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 rounded-none">
+                        <h1 className="text-5xl font-bold p-4 text-center">Contact Us</h1>
                         <form className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" placeholder="email" className="input input-bordered" required />
+                                <input type="email" placeholder="email" className="input input-bordered rounded-none" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Password</span>
+                                    <span className="label-text">message</span>
                                 </label>
-                                <input type="password" placeholder="password" className="input input-bordered" required />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
+                                <input type="text" placeholder="message" className="input input-bordered rounded-none" required />
                             </div>
+                           
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn btn-primary">Send</button>
                             </div>
                         </form>
                     </div>
