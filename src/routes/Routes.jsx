@@ -9,11 +9,13 @@ import Estates from "../components/Estates/Estates";
 import EstateDetails from "../components/Estates/EstateDetails";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
+import Error from "../components/Error/Error";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement: <Error></Error>,
         children: [{
             path: "/",
             element: <Home></Home>,
