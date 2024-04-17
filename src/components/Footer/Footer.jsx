@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
+import logo from "../../assets/jr.png";
 
 const Footer = () => {
     return (
         <div>
             <footer className="footer p-10 bg-base-200 text-base-content mt-24">
                 <aside>
-                    <Link to="/"><p className="text-xl font-bold">K Developers</p></Link>
+                    <Link to="/"><p className="text-xl font-bold flex items-center gap-1"><img className="w-6" src={logo} alt="" />JR Developers</p></Link>
                     <p>A trusted real estate company</p>
                     <div>
-                <p>Copyrights &#169; 2024 - All Rights Reserved by K Developer</p>
+                <p>Copyrights &#169; 2024 - All Rights Reserved by JR Developers Ltd.</p>
                 </div>
                 </aside>
                 <nav>

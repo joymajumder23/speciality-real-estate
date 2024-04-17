@@ -3,19 +3,23 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaChartArea } from "react-icons/fa";
 import { ImPriceTags } from "react-icons/im";
 import { IoIosArrowBack } from "react-icons/io";
+import { Helmet } from "react-helmet-async";
 
 const EstateDetails = () => {
     const estates = useLoaderData();
-    console.log(estates);
+    // console.log(estates);
 
     const { id } = useParams();
     const intId = parseInt(id);
-    console.log(typeof intId);
+    // console.log(typeof intId);
     const aEstate = estates.find(estate => estate.id === intId);
-    console.log(aEstate);
+    // console.log(aEstate);
     const { image, estate_title, description, facilities, segment_name, area, status, price } = aEstate;
     return (
         <div>
+            <Helmet>
+            <title>Home | Property Details</title>
+            </Helmet>
             <div className="md:flex gap-4">
                 <div className="card w-full bg-base-100 shadow-xl rounded-none">
                     <figure><img className="w-96" src={image} alt="Shoes" /></figure>

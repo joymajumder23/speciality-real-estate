@@ -10,6 +10,7 @@ import EstateDetails from "../components/Estates/EstateDetails";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import Error from "../components/Error/Error";
+import Contact from "../components/Contact/Contact";
 
 const router = createBrowserRouter([
     {
@@ -42,7 +43,11 @@ const router = createBrowserRouter([
         {
             path: "/updateProfile",
             element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
-        }]
+        },
+    {
+        path: "/contact",
+        element: <Contact></Contact>
+    }]
     }
 ]);
 

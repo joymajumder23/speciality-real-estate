@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
 import { useForm } from 'react-hook-form';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const { createUser, updateUser } = useContext(AuthContext);
@@ -57,8 +58,11 @@ const Register = () => {
             })
     };
     return (
-        <div>
-            <div className="hero min-h-screen bg-base-200">
+        <div className='mt-12'>
+            <Helmet>
+            <title>Home | Register</title>
+            </Helmet>
+            <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-10">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Register now!</h1>
