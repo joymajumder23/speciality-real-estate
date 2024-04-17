@@ -1,56 +1,61 @@
 import { useContext, useState } from 'react';
 import signUX from '../../assets/signUp.svg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import toast, { Toaster } from 'react-hot-toast';
+import { useForm } from 'react-hook-form';
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
     // const [success, setSuccess] = useState(null);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
-    const handleRegister = e => {
-        e.preventDefault();
-        const form = new FormData(e.currentTarget);
-        const name = form.get('fullName');
-        const email = form.get('email');
-        const photo = form.get('image');
-        const password = form.get('password');
-        const confirmPassword = form.get('confirmPassword');
-        console.log(name, email, photo, password, confirmPassword);
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm();
 
-        
+    const onSubmit = (data) => {
+        const {email, password, name, image, confirmPassword} = data;
+
         if(password.length < 6){
-            setError('password must be 6 characters');
-            return;
-        }
-
-        else if(password !== confirmPassword){
-            setError('password did not matched');
-            return;
-        }
-        else if(!/(?=.*[A-Z])/.test(password)){
-            setError('must have an Uppercase letter in the password');
-            return;
-        }
-        else if(!/^(?=.*[a-z]).+$/.test(password)){
-            setError('must have an Lowercase letter in the password');
-            return;
-        }
-        setError("");
-        // setSuccess("");
+                    setError('password must be 6 characters');
+                    return;
+                }
         
-        // create user
+                else if(password !== confirmPassword){
+                    setError('password did not matched');
+                    return;
+                }
+                else if(!/(?=.*[A-Z])/.test(password)){
+                    setError('must have an Uppercase letter in the password');
+                    return;
+                }
+                else if(!/^(?=.*[a-z]).+$/.test(password)){
+                    setError('must have an Lowercase letter in the password');
+                    return;
+                }
+                setError("");
+               // setSuccess("");
+
+       // create user
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
-                toast.success('Successfuly registered');
+                
+                updateUser(name, image)
+                .then(()=> {
+                    toast.success('Successfuly registered');
+                    navigate("/");
+                })
             })
             .catch(error => {
                 console.log(error.message);
                 setError(error.message);
             })
-    }
+    };
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">
@@ -60,33 +65,40 @@ const Register = () => {
                         <img src={signUX} alt="" />
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 rounded-none">
-                        <form onSubmit={handleRegister} className="card-body">
+                        <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input name='fullName' type="text" placeholder="full name" className="input input-bordered rounded-none" required />
+                                <input name='name' type="text" placeholder="full name" className="input input-bordered rounded-none" 
+                                {...register("name", { required: true })} />
+                                {errors.name && <span className='text-red-600'>This field is required</span>}
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input name='email' type="email" placeholder="email" className="input input-bordered rounded-none" required />
+                                <input name='email' type="email" placeholder="email" className="input input-bordered rounded-none" 
+                                {...register("email", { required: true })} />
+                                {errors.email && <span className='text-red-600'>This field is required</span>}
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text" name='image' placeholder="photo url" className="input input-bordered rounded-none" required />
+                                <input type="text" name='image' placeholder="photo url" className="input input-bordered rounded-none" {...register("image", { required: true })} />
+                                {errors.image && <span className='text-red-600'>This field is required</span>}
                             </div>
 
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input name='password' type="password" placeholder="password" className="input input-bordered rounded-none" required />
+                                <input name='password' type="password" placeholder="password" className="input input-bordered rounded-none" 
+                                {...register("password", { required: true })} />
+                                {errors.password && <span className='text-red-600'>This field is required</span>}
                                 {/* <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label> */}
@@ -96,7 +108,8 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Confirm Password</span>
                                 </label>
-                                <input name='confirmPassword' type="password" placeholder="password" className="input input-bordered rounded-none" required />
+                                <input name='confirmPassword' type="password" placeholder="password" className="input input-bordered rounded-none" {...register("confirmPassword", { required: true })} />
+                                {errors.confirmPassword && <span className='text-red-600'>This field is required</span>}
                                 {/* <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label> */}
