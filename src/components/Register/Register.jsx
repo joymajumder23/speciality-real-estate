@@ -28,6 +28,7 @@ const Register = () => {
         
                 else if(password !== confirmPassword){
                     setError('password did not matched');
+                    toast.error('password did not matched');
                     return;
                 }
                 else if(!/(?=.*[A-Z])/.test(password)){
@@ -46,6 +47,7 @@ const Register = () => {
             .then(result => {
                 console.log(result.user);
                 
+                // update user
                 updateUser(name, image)
                 .then(()=> {
                     toast.success('Successfuly registered');
@@ -117,9 +119,9 @@ const Register = () => {
                                 {/* <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label> */}
-                                {
+                                {/* {
                                     error && <p className='text-red-600'>{error}</p>
-                                }
+                                } */}
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary rounded-none">Register</button>

@@ -51,7 +51,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <div className="hidden lg:block">
+                <div className="hidden md:block">
                 {
                     user && <p>{user.displayName}</p>
                 }
