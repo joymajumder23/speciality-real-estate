@@ -41,9 +41,9 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-    
-                <a className="btn btn-ghost text-xl"><img className="w-6" src={logo} alt="" />JR Developers</a>
-                
+
+                <Link to="/"><a className="btn btn-ghost text-xl"><img className="w-6" src={logo} alt="" />JR Developers</a></Link>
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -52,15 +52,15 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <div className="hidden md:block">
-                {
-                    user && <p>{user.displayName}</p>
-                }
+                    {
+                        user && <p>{user.displayName}</p>
+                    }
                 </div>
                 <div className="dropdown dropdown-end z-10">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                             {
-                               user? <img alt="" src={user.photoURL? user?.photoURL : profile} /> : <img alt="" src={profile} />
+                                user ? <img alt="" src={user.photoURL ? user?.photoURL : profile} /> : <img alt="" src={profile} />
                             }
                         </div>
                     </div>
