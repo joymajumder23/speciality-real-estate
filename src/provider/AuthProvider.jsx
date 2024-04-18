@@ -6,16 +6,19 @@ import PropTypes from 'prop-types';
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({children}) => {
+    
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
+    // create user
     const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
+    //update user 
     const updateUser = (name, image) => {
         return updateProfile(auth.currentUser, {
             displayName: name, 

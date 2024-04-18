@@ -6,7 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const UpdateProfile = () => {
     const { user, updateUser } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
     const { displayName, photoURL } = user;
     // console.log(displayName, photoURL);
     const {
@@ -28,11 +28,19 @@ const UpdateProfile = () => {
             <Helmet>
                 <title>Home | Update Profile</title>
             </Helmet>
-            <h1 className='text-3xl font-bold mb-4'>Update Profile</h1>
+            <h1 className='text-3xl font-bold mb-4 p-4'>Update Profile</h1>
             <div className=" rounded bg-base-100 shadow-xl md:flex">
+                <div>
+                <div className='text-xl font-bold px-10'>
+                    <h1>Profile:</h1>
+                    <p>Name: <span>{user.displayName}</span></p>
+                </div>
+                <div>
                 <figure><img className='w-full p-10' src={photoURL} alt="" /></figure>
+                </div>
+                </div>
                 <div className="card-body">
-                    <form onClick={handleSubmit(onSubmit)}>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -50,7 +58,7 @@ const UpdateProfile = () => {
                                 {...register("image", { required: false })} />
                         </div>
                         <div className="justify-end mt-2 w-1">
-                            <button className="btn btn-primary">Save</button>
+                            <button className="btn btn-primary rounded-none">Save</button>
                         </div>
                     </form>
 

@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     const estates = useLoaderData();
-    console.log(estates);
+    // console.log(estates);
     return (
         <div>
             <Helmet>

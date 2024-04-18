@@ -16,13 +16,13 @@ const EstateDetails = () => {
     // console.log(aEstate);
     const { image, estate_title, description, facilities, segment_name, area, status, price } = aEstate;
     return (
-        <div>
+        <div className="mt-10">
             <Helmet>
             <title>Home | Property Details</title>
             </Helmet>
-            <div className="md:flex gap-4">
+            <figure><img className="w-full h-96" src={image} alt="Shoes" /></figure>
+            <div className="md:flex gap-4 mt-4">
                 <div className="card w-full bg-base-100 shadow-xl rounded-none">
-                    <figure><img className="w-96" src={image} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title text-3xl">{estate_title}</h2>
                         <p>{description}</p>
