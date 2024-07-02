@@ -1,4 +1,10 @@
 # Speciality Real Estate Assignment Project
+<p><a href="speciality-real-estate.web.app">Live Link</a></p>
+
+**Features:**
+- Here a user can view various types of salable estates.
+- Here are all the details about the estate. As a result, buyers may want to see everything and buy
+
 **We used the some essintial packages:**
  1. Undraw - used for various illustrates.
  2. React Icons - used for different icons.
@@ -13,4 +19,11 @@
  11. daisyUI - used for ready made designs or components.
  12. Google Font - used for stylish fonts.
  13. Firebase - used for authentication.
+
+ **How to run**
+- Copy the URL of the Git project.
+- Go to the local folder and clone Git with the URL.
+- Go to command prompt and open the code.
+- npm install in command prompt.
+- npm run dev.
 
